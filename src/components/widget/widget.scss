@@ -1,0 +1,19 @@
+
+header {
+    display: flex;
+    justify-content: space-between;    
+}
+
+.d {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+}
+.line {
+    border: none;
+    border-bottom: solid 20px;
+    width: 54px;
+    height: 7px;
+    margin: 0;
+    // height: 20px;
+}
