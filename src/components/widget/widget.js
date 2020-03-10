@@ -17,7 +17,7 @@ const Widget = props => {
 			<Title title={props.name}/>
 			<Tooltip />
 			</header>
-			<Hr type={props.type} items={props.items} />
+			<Hr type={props.type} items={props.items} description={props.description} />
 			</>
 		)
 }

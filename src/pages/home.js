@@ -19,7 +19,7 @@ class Home extends React.Component {
     render(){
         return(
             <div className="page">
-            {this.state.data.map((item) => <Widget key={item.id} name={item.name} items={item.items} type={item.type}/>)}
+            {this.state.data.map((item) => <Widget key={item.id} name={item.name} items={item.items} description={item.description} type={item.type}/>)}
             </div>
         )
     }

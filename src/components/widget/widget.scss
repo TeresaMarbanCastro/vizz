@@ -1,7 +1,10 @@
 
 header {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between;
+    h2{
+        text-align: start;
+    }
 }
 
 .d {

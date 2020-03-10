@@ -5,22 +5,35 @@ import GradientLine from './gradientLine';
 import SingleColorLine from './singleColorLine';
 import Basic from './basic';
 
-const Hr = props => {
-	const grd = () =>{
-		if(props.type==="gradient") return <GradientLine items={props.items} type={props.type}/>
+class Hr extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			isTextVisible: false
+		};
 	}
-	const c = () =>{
-		if(props.type==="choropleth") return<SingleColorLine items={props.items} type={props.type}/>
+
+	handleClick= () => {
+		this.setState({isTextVisible: !this.state.isTextVisible})		
 	}
-	const b = () =>{
-		if(props.type==="basic") return <Basic items={props.items} type={props.type}/>
+	grd = () =>{
+		if(this.props.type==="gradient") return <GradientLine isTextVisible={this.state.isTextVisible} onClick={this.handleClick} items={this.props.items} type={this.props.type} description={this.props.description}/>
 	}
+	c = () =>{
+		if(this.props.type==="choropleth") return<SingleColorLine items={this.props.items} type={this.props.type}/>
+	}
+	b = () =>{
+		if(this.props.type==="basic") return <Basic items={this.props.items} type={this.props.type}/>
+	}
+	
+	render(){
 		return (
-		<div className="hrr">
-			{grd()}
-			{c()}
-			{b()}
-		</div>
-	)
+			<div className="hrr">
+				{this.grd()}
+				{this.c()}
+				{this.b()}
+			</div>
+		)
+	}
 }
 export default Hr

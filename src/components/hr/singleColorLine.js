@@ -7,7 +7,7 @@ const SingleColorLine = props => {
 			{props.items.map((el, i) => <hr style={{color: el.color}} key={i} className="line"></hr>)}
 		</button>
 		<div className="cloropeth-titles-container">
-		{props.items.map((el, i) => el.name ? <p>{el.name}</p> : null)}
+		{props.items.map((el, i) => el.name ? <p key={i}>{el.name}</p> : null)}
 	</div>
 	</div>
 	
