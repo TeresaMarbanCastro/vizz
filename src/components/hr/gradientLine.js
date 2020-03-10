@@ -2,7 +2,7 @@ import React from 'react';
 
 const GradientLine = props => {
 	const colors = props.items.map((item => item.color)).join(',');
-	const des = props.description.replace(/<[^>]*>?/gm, '');
+	const des = props.description.replace(/<[^>]*>/gm, '');
 	
 	return(
 		<div className="gradient-container">
@@ -10,9 +10,13 @@ const GradientLine = props => {
 			<div className="gradient-titles-container">
 			{props.items.map((el, i) => el.name ? <p key={i}>{el.name}</p> : null)}
 			</div>
-			<div className="animated-text">
-				{props.isTextVisible ? <p>{des}</p> : ''}	
-			</div>
+
+				{props.isTextVisible ?
+					<div className="animated-text">
+					<p>{des}</p>
+					<a>Check the data</a>
+					</div> : ''}
+
 		</div>
 	)
 }

@@ -7,25 +7,27 @@ import show from '../../assets/icons/show.svg';
 import expand from '../../assets/icons/arrow-down.svg';
 import Button from '../button/button';
 
-
-
-
-const Tooltip = () => {
-	let isVisible = true;
-	let x = isVisible ? show : hide;
-	const handleClick = () => {
-		console.log(isVisible)
-		return !isVisible
+class Tooltip extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			isVisible: true
+		};
 	}
+	handleClick = () => {
+		console.log(this.state.isVisible)
+		this.setState({isVisible: !this.state.isVisible})		
+	}
+	render(){
 	return (
 		<ul className="tooltip-container">
-			<li><Button alt="show content" src={x} onClick={handleClick}/></li>
+			<li><Button alt="show content" src={this.state.isVisible ? show : hide} onClick={this.handleClick}/></li>
 			<li><Button alt="more information" src={info} /></li>
 			<li><Button alt="expand" src={expand} /></li>
 		</ul>
 	)
 }
-
+}
 // Tooltip.PropTypes = {
 //     alt: PropTypes.string,
 //     // src: Proptypes.string
