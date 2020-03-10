@@ -3,13 +3,23 @@ import './hr.scss';
 
 import GradientLine from './gradientLine';
 import SingleColorLine from './singleColorLine';
+import Basic from './basic';
 
 const Hr = props => {
-	return (
-		<div>
-			<GradientLine items={props.items} type={props.type}/>
-			<SingleColorLine items={props.items}  type={props.type}/>
-		{props.items.map((el, i) => el.name ? <p className="line-title">{el.name}</p> : '')}
+	const grd = () =>{
+		if(props.type==="gradient") return <GradientLine items={props.items} type={props.type}/>
+	}
+	const c = () =>{
+		if(props.type==="choropleth") return<SingleColorLine items={props.items} type={props.type}/>
+	}
+	const b = () =>{
+		if(props.type==="basic") return <Basic items={props.items} type={props.type}/>
+	}
+		return (
+		<div className="hrr">
+			{grd()}
+			{c()}
+			{b()}
 		</div>
 	)
 }

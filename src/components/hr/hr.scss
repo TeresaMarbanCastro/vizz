@@ -1,7 +1,7 @@
 .line {
     border: none;
     border-top: solid 20px;
-    width: 54px;
+    width: 70px;
     height: 7px;
     margin: 0;
     
@@ -18,4 +18,43 @@ button {
 
 .line-title{
     margin: 0;
+}
+
+.basic{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+.basic-titles{
+    display: flex;
+    flex-direction: column;
+}
+
+.basic-container{
+    display: flex;
+    flex-direction: row;
+}
+.cloropeth-container, .gradient-container{
+    display: flex;
+    flex-direction: column
+}
+
+.cloropeth-titles-container, .gradient-titles-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.basic-titles-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    p{
+        margin: 5px 0 0 20px;
+    }
+}
+
+.basic-buttons-container{
+    button{
+        margin-top: 7px;
+    }
 }
