@@ -11,7 +11,7 @@ class Tooltip extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			isVisible: true
+			isVisible: false
 		};
 	}
 	handleClick = () => {
@@ -21,7 +21,7 @@ class Tooltip extends React.Component {
 	render(){
 	return (
 		<ul className="tooltip-container">
-			<li><Button alt="show content" src={this.state.isVisible ? show : hide} onClick={this.handleClick}/></li>
+			<li><Button alt="show content" src={this.state.isVisible ? show : hide} onClick={this.handleClick}/><div>{this.state.isVisible ? 'Show layer' : 'Hide layer'}</div></li>
 			<li><Button alt="more information" src={info} /></li>
 			<li><Button alt="expand" src={expand} /></li>
 		</ul>
