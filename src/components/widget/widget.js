@@ -1,6 +1,8 @@
 import React from 'react'
 import Tooltip from '../tooltip/tooltip';
 import Title from '../title/title';
+import Hr from '../hr/hr';
+
 import Button from '../button/button';
 import drag from '../../assets/icons/drag-dots.svg';
 
@@ -15,7 +17,7 @@ const Widget = props => {
 			<Title title={props.name}/>
 			<Tooltip />
 			</header>
-			<div className="d">{props.items.map((el) => <hr style={{color: el.color}} key={el.id} className="line"></hr>)}</div>
+			<Hr type={props.type} items={props.items} />
 			</>
 		)
 }

@@ -1,0 +1,21 @@
+.line {
+    border: none;
+    border-top: solid 20px;
+    width: 54px;
+    height: 7px;
+    margin: 0;
+    
+}
+button {
+    display: flex;
+    flex-direction: row;
+}
+.buttonGradient{
+    height: 54px;
+    width: 100%;
+    padding: 0;
+}
+
+.line-title{
+    margin: 0;
+}
