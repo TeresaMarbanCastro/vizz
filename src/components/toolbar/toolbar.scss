@@ -19,3 +19,12 @@ button:hover{
 .hidden{
     display: none;
 }
+.rotate-up-right-down{
+    transform-origin: 100% 50%;
+    transition: transform .5s linear;
+}
+.rotate-down-right-up{
+    transform: rotate(-180deg);
+    transform-origin: 100% 50%;
+    transition: transform .5s linear;
+}

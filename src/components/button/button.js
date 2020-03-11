@@ -1,12 +1,15 @@
 import React from 'react';
+import Icon from '../icon/icon';
 import './button.scss';
 
-function Button (props) { 
-    return (
-        <button onClick={props.onClick} name={props.name}>{props.label}
-            <img src={props.src} alt={props.alt} />
+const Button = props => {
+   return (
+        <button onClick={props.onClick}
+            aria-expanded={props.isVisible}    
+            name={props.name}
+            className={props.className}>{props.label}
+            <Icon src={props.src} alt={props.alt} />
         </button>
-    )
-};
+   )};
 
 export default Button;

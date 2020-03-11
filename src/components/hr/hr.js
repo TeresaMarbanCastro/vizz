@@ -1,7 +1,7 @@
 import React from 'react';
 import './hr.scss';
 
-import GradientLine from './gradientLine';
+import Gradient from './gradientLine';
 import SingleColorLine from './singleColorLine';
 import Basic from './basic';
 
@@ -9,7 +9,8 @@ class Hr extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			isTextVisible: false
+			isTextVisible: false,
+			
 		};
 	}
 
@@ -17,7 +18,7 @@ class Hr extends React.Component {
 		this.setState({isTextVisible: !this.state.isTextVisible})		
 	}
 	grd = () =>{
-		if(this.props.type==="gradient") return <GradientLine isTextVisible={this.state.isTextVisible} onClick={this.handleClick} items={this.props.items} type={this.props.type} description={this.props.description}/>
+		if(this.props.type==="gradient") return <Gradient isTextVisible={this.state.isTextVisible} onClick={this.handleClick} items={this.props.items} type={this.props.type} description={this.props.description}/>
 	}
 	c = () =>{
 		if(this.props.type==="choropleth") return<SingleColorLine items={this.props.items} type={this.props.type}/>
@@ -28,11 +29,11 @@ class Hr extends React.Component {
 	
 	render(){
 		return (
-			<div className="hrr">
+			<>
 				{this.grd()}
 				{this.c()}
 				{this.b()}
-			</div>
+			</>
 		)
 	}
 }

@@ -1,25 +1,34 @@
 import React from 'react';
 
-const GradientLine = props => {
+const Gradient = props => {
 	const colors = props.items.map((item => item.color)).join(',');
-	const des = props.description.replace(/<[^>]*>/gm, '');
-	
+	const randomText = 'Culpa nisi adipisicing irure exercitation et velit ea. Ipsum ullamco nostrud aliqua esse dolor deserunt ad incididunt minim quis amet nisi consectetur sunt.'; 
+	const url = "https://vizzuality.com";
 	return(
-		<div className="gradient-container">
-			<button className="buttonGradient" onClick={props.onClick} style={{background: `linear-gradient(to right, ${colors})`}}></button>
+		<section className="gradient-container">
+			<button className="buttonGradient"
+				onClick={props.onClick}
+				style={{background: `linear-gradient(to right, ${colors})`}}
+				id="button-gradient-id"
+				aria-controls="extra-text">
+			</button>
 			<div className="gradient-titles-container">
 			{props.items.map((el, i) => el.name ? <p key={i}>{el.name}</p> : null)}
 			</div>
 
 				{props.isTextVisible ?
-					<div className="animated-text">
-					<p>{des}</p>
-					<a>Check the data</a>
+					<div className="animated-text"
+						role="region"
+						id="extra-text"
+						aria-live="polite">
+						<p>{randomText}</p>
+						<a href={url} target="_blank"
+						rel="noopener noreferrer"
+						>Check the data</a>
 					</div> : ''}
-
-		</div>
+		</section>
 	)
 }
 
-export default GradientLine
+export default Gradient
 
