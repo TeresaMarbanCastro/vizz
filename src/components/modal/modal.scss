@@ -1,0 +1,28 @@
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(52, 73, 94, 0.8);
+}
+
+.modal-content{
+    position: fixed;
+    top: 25%;
+    margin: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 2%;
+}
+
+.button-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 30px;
+    background: #fff;
+    cursor: pointer;
+    border: 0;
+}

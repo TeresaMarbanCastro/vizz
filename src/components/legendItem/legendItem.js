@@ -7,9 +7,10 @@ import drag from '../../assets/icons/drag-dots.svg';
 import info from '../../assets/icons/info.svg';
 import hide from '../../assets/icons/hide-eye.svg';
 import show from '../../assets/icons/show.svg';
+import close from '../../assets/icons/close.svg';
 import Button from '../button/button';
 import expand from '../../assets/icons/arrow-down.svg';
-
+import Modal from '../../components/modal/modal';
 import './legendItem.scss';
 
 class LegendItem extends React.Component {
@@ -22,6 +23,12 @@ class LegendItem extends React.Component {
 		};
 	}
 
+	parseText = this.props.description.replace(/<[^>]*>/gm, '');
+	SHOW_LAYER = "Show layer";
+	HIDE_LAYER = "Hide layer";
+	COLLAPSE_LAYER = "Collapse layer";
+	EXPAND_LAYER = "Expand layer";
+
 	onChangeVisibility = () => {
 		console.log(this.state.isVisible)
 		this.setState({isVisible: !this.state.isVisible})		
@@ -31,14 +38,15 @@ class LegendItem extends React.Component {
 		console.log(this.parseText);
 		this.setState({isInfoOpen: !this.state.isInfoOpen})
 	}
+
 	onChangeCollapse = () => {
 		console.log(this.state.isExpanded);
 		this.setState({isExpanded: !this.state.isExpanded})
 	}
 
-	parseText = this.props.description.replace(/<[^>]*>/gm, '');
-
 	render() {
+	const visibilityName = this.state.isVisible ? this.SHOW_LAYER : this.HIDE_LAYER;
+	const collapseName = this.state.isExpanded ? this.COLLAPSE_LAYER : this.EXPAND_LAYER;
 	return(
 		<section>
 			<header>
@@ -48,7 +56,7 @@ class LegendItem extends React.Component {
 			<Toolbar>
 				<li><Button
 					src={this.state.isVisible ? show : hide}
-					name={this.state.isVisible ? 'Show layer' : 'Hide layer'}
+					name={visibilityName}
 					onClick={this.onChangeVisibility}
 					onMouseOver={this.onMouseOver}
 					/>
@@ -62,6 +70,7 @@ class LegendItem extends React.Component {
 						src={info}
 						onClick={this.onChangeInfo}
 						title="more info"
+						aria-haspopup="true"
 						/>
 						{/* <Tooltip isHover={this.state.isHover}/> */}
 				</li> 
@@ -69,7 +78,7 @@ class LegendItem extends React.Component {
 			<li><Button 
 					src={expand}
 					onClick={this.onChangeCollapse}
-					name={this.state.isExpanded ? 'Collapse layer' : 'Expand layer'}
+					name={collapseName}
 					ariaExpanded={this.state.isExpanded}
 					className={this.state.isExpanded ? 'rotate-up-right-down' : 'rotate-down-right-up'}
 					/>
@@ -80,6 +89,16 @@ class LegendItem extends React.Component {
 			</header>
 			{this.state.isExpanded
 			? <Hr type={this.props.type} items={this.props.items} />
+			: ''}
+			{this.state.isInfoOpen
+			? <Modal>
+					<Title title={this.parseText}/>
+					<Button 
+						className="button-modal"					
+						name="close"
+						src={close}
+						onClick={this.onChangeInfo}/>
+				</Modal>
 			: ''}
 		</section>
 	)
