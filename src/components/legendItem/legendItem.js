@@ -87,11 +87,9 @@ class LegendItem extends React.Component {
 			</Toolbar>
 			{/* /<Toolbar description={this.props.description} */}
 			</header>
-			{this.state.isExpanded
-			? <Hr type={this.props.type} items={this.props.items} />
-			: ''}
-			{this.state.isInfoOpen
-			? <Modal>
+			{this.state.isExpanded &&<Hr type={this.props.type} items={this.props.items}/>
+			}
+			{this.state.isInfoOpen && <Modal>
 					<Title title={this.parseText}/>
 					<Button 
 						className="button-modal"					
@@ -99,7 +97,7 @@ class LegendItem extends React.Component {
 						src={close}
 						onClick={this.onChangeInfo}/>
 				</Modal>
-			: ''}
+			}
 		</section>
 	)
 }

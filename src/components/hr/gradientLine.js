@@ -13,10 +13,10 @@ const Gradient = props => {
 				aria-controls="extra-text">
 			</button>
 			<div className="gradient-titles-container">
-			{props.items.map((el, i) => el.name ? <p key={i}>{el.name}</p> : null)}
+			{props.items.filter(item => item.name).map((el,i) => <p key={i}>{el.name}</p>)}
 			</div>
 
-				{props.isTextVisible ?
+				{props.isTextVisible &&
 					<div className="animated-text"
 						role="region"
 						id="extra-text"
@@ -25,7 +25,7 @@ const Gradient = props => {
 						<a href={url} target="_blank"
 						rel="noopener noreferrer"
 						>Check the data</a>
-					</div> : ''}
+					</div>}
 		</section>
 	)
 }
