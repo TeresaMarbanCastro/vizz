@@ -57,11 +57,8 @@ class LegendItem extends React.Component {
 					src={this.state.isVisible ? show : hide}
 					name={visibilityName}
 					onClick={this.onChangeVisibility}
-					// onMouseOver={this.onChangeVisibility}
 					/>
-					{/* <Tooltip 
-					title={this.state.isVisible ? 'Show layer' : 'Hide layer'}
-					isHover={this.state.isHover}/> */}
+
 				</li>
 
 				<li><Button
@@ -72,7 +69,6 @@ class LegendItem extends React.Component {
 						title="more info"
 						aria-haspopup="true"
 						/>
-						{/* <Tooltip isHover={this.state.isHover}/> */}
 				</li> 
 
 			<li><Button 
@@ -83,7 +79,6 @@ class LegendItem extends React.Component {
 					ariaExpanded={this.state.isExpanded}
 					className={this.state.isExpanded ? 'rotate-up-right-down' : 'rotate-down-right-up'}
 					/>
-					{/* <Tooltip isHover={this.state.isHover} isLegendItemVisible={this.state.isLegendItemVisible} */}
 			</li>
 			</Toolbar>
 			{/* /<Toolbar description={this.props.description} */}
