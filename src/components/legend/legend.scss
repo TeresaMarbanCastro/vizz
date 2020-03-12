@@ -3,10 +3,10 @@
     display: grid;
     grid-template-columns: 1fr 10fr 0.2fr;
     @media (min-width: 625px) {
-    grid-template-columns: 1fr 15fr 0.5fr;
+     grid-template-columns: 1fr 15fr 0.5fr;
     } 
     @media (min-width: 1060px) {
-    grid-template-columns: 0.5fr 20fr 0.5fr;
+     grid-template-columns: 0.5fr 20fr 0.5fr;
     }
 }
 

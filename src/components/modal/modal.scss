@@ -10,11 +10,14 @@
 
 .modal-content{
     position: fixed;
-    top: 25%;
+    top: 2%;
     margin: 30px;
     padding: 20px;
     background: #fff;
     border-radius: 2%;
+    @media (min-width: 650px) {
+        top: 25%;
+    }
 }
 
 .button-modal{
