@@ -55,10 +55,11 @@ class LegendItem extends React.Component {
 
 			<Toolbar>
 				<li><Button
+					dataTooltipText={visibilityName}
 					src={this.state.isVisible ? show : hide}
 					name={visibilityName}
 					onClick={this.onChangeVisibility}
-					onMouseOver={this.onMouseOver}
+					// onMouseOver={this.onChangeVisibility}
 					/>
 					{/* <Tooltip 
 					title={this.state.isVisible ? 'Show layer' : 'Hide layer'}
@@ -87,9 +88,11 @@ class LegendItem extends React.Component {
 			</Toolbar>
 			{/* /<Toolbar description={this.props.description} */}
 			</header>
-			{this.state.isExpanded &&<Hr type={this.props.type} items={this.props.items}/>
+			{this.state.isExpanded &&
+				<Hr type={this.props.type} items={this.props.items}/>
 			}
-			{this.state.isInfoOpen && <Modal>
+			{this.state.isInfoOpen &&
+				<Modal>
 					<Title title={this.parseText}/>
 					<Button 
 						className="button-modal"					

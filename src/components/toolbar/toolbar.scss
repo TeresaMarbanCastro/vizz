@@ -9,16 +9,7 @@ li {
         height: 16ox;
         margin-left: 8px;
 }
-button:hover{
-    background-color: red;
-}
-.block{
-    display: block
-}
 
-.hidden{
-    display: none;
-}
 .rotate-up-right-down{
     transform-origin: 100% 50%;
     transition: transform .5s linear;

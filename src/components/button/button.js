@@ -4,11 +4,11 @@ import './button.scss';
 
 const Button = props => {
    return (
-        <button onClick={props.onClick}
-            onMouseOver={props.onMouseOver}
-            onMouseOut={props.onMouseOut}
+        <button 
+            onClick={props.onClick}
+            data-tooltip={props.dataTooltipText}
             name={props.name}
-            className={props.className}>{props.label}
+            className={props.className}>
             <Icon src={props.src} alt={props.alt} />
         </button>
    )};
