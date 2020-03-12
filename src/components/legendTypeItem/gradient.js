@@ -16,7 +16,7 @@ const Gradient = props => {
 			{props.items.filter(item => item.name).map((el,i) => <p key={i}>{el.name}</p>)}
 			</div>
 			{props.isExtraTextVisible &&
-				<div className="animated-text"
+				<div
 					role="region"
 					id="extra-text"
 					aria-live="polite">
