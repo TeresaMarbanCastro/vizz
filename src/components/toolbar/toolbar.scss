@@ -10,11 +10,11 @@ li {
         margin-left: 8px;
 }
 
-.rotate-up-right-down{
+.rotate-up-right-down img{
     transform-origin: 100% 50%;
     transition: transform .5s linear;
 }
-.rotate-down-right-up{
+.rotate-down-right-up img{
     transform: rotate(-180deg);
     transform-origin: 100% 50%;
     transition: transform .5s linear;

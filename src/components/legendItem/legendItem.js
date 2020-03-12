@@ -28,6 +28,7 @@ class LegendItem extends React.Component {
 	HIDE_LAYER = "Hide layer";
 	COLLAPSE_LAYER = "Collapse layer";
 	EXPAND_LAYER = "Expand layer";
+	LAYER_INFO= "Layer info";
 
 	onChangeVisibility = () => {
 		console.log(this.state.isVisible)
@@ -67,7 +68,8 @@ class LegendItem extends React.Component {
 				</li>
 
 				<li><Button
-						name="Layer info" 
+						name={this.LAYER_INFO}
+						dataTooltipText={this.LAYER_INFO}
 						src={info}
 						onClick={this.onChangeInfo}
 						title="more info"
@@ -79,6 +81,7 @@ class LegendItem extends React.Component {
 			<li><Button 
 					src={expand}
 					onClick={this.onChangeCollapse}
+					dataTooltipText={collapseName}
 					name={collapseName}
 					ariaExpanded={this.state.isExpanded}
 					className={this.state.isExpanded ? 'rotate-up-right-down' : 'rotate-down-right-up'}
