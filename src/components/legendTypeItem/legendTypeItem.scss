@@ -1,9 +1,8 @@
 .line {
     border: none;
     border-top: solid 7px;
-    width: 70px;
+    width: 100%;
     margin: 0;
-    
 }
 button {
     display: flex;
@@ -32,6 +31,7 @@ button {
 .basic-container{
     display: flex;
     flex-direction: row;
+    margin-left: 15px;
 }
 .cloropeth-container, .gradient-container{
     display: flex;

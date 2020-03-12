@@ -1,14 +1,19 @@
 
-header {
-    display: flex;
-    justify-content: space-between;
-    h2{
-        text-align: start;
+.legend-header {
+    display: grid;
+    grid-template-columns: 1fr 10fr 0.2fr;
+    @media (min-width: 625px) {
+    grid-template-columns: 1fr 15fr 0.5fr;
+    } 
+    @media (min-width: 1060px) {
+    grid-template-columns: 0.5fr 20fr 0.5fr;
     }
 }
 
-.d {
-    display: flex;
-    justify-content: flex-start;
-    align-content: center;
+.legend-drag-icon {
+    width: 11px;
+    margin-top: 10px;
+    
+    @media (min-width: 1060px) {
+    }
 }

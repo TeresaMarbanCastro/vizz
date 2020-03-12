@@ -47,8 +47,8 @@ class Legend extends React.Component {
 	const collapseName = this.state.isExpanded ? this.COLLAPSE_LAYER : this.EXPAND_LAYER;
 	return(
 		<section>
-			<header>
-				<Icon src={drag}/>
+			<header className="legend-header">
+				<Icon src={drag} className="legend-drag-icon"/>
 				<Title title={this.props.name}/>
 				<Toolbar>
 					<li><Button
