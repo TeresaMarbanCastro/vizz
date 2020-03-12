@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SingleColorLine = props => {
+const Cloropeth = props => {
 	return(
 		<div className="cloropeth-container">
 		<button className="buttonGradient">
@@ -14,4 +14,4 @@ const SingleColorLine = props => {
 	)
 }
 
-export default SingleColorLine
+export default Cloropeth

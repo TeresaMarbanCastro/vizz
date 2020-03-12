@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LegendItem from '../components/legendItem/legendItem';
+import Legend from '../components/legend/legend';
 import './home.scss';
 
 
@@ -21,7 +21,7 @@ class Home extends React.Component {
 			<main className="page">
 				{this.state.data.map((item) => {
 					return(
-						<LegendItem 
+						<Legend 
 							key={item.id}
 							name={item.name} 
 							items={item.items}

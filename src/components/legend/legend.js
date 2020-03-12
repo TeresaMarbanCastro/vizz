@@ -2,7 +2,7 @@ import React from 'react'
 import Toolbar from '../toolbar/toolbar';
 import Title from '../title/title';
 import Icon from '../icon/icon';
-import Hr from '../hr/hr';
+import LegendTypeItem from '../legendTypeItem/legendTypeItem';
 import drag from '../../assets/icons/drag-dots.svg';
 import info from '../../assets/icons/info.svg';
 import hide from '../../assets/icons/hide-eye.svg';
@@ -11,9 +11,9 @@ import close from '../../assets/icons/close.svg';
 import Button from '../button/button';
 import expand from '../../assets/icons/arrow-down.svg';
 import Modal from '../../components/modal/modal';
-import './legendItem.scss';
+import './legend.scss';
 
-class LegendItem extends React.Component {
+class Legend extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
@@ -48,43 +48,37 @@ class LegendItem extends React.Component {
 	return(
 		<section>
 			<header>
-			<Icon src={drag}/>
-			<Title title={this.props.name}/>
-
-			<Toolbar>
-				<li><Button
-					dataTooltipText={visibilityName}
-					src={this.state.isVisible ? show : hide}
-					name={visibilityName}
-					onClick={this.onChangeVisibility}
-					/>
-
-				</li>
-
-				<li><Button
-						name={this.LAYER_INFO}
-						dataTooltipText={this.LAYER_INFO}
-						src={info}
-						onClick={this.onChangeInfo}
-						title="more info"
-						aria-haspopup="true"
+				<Icon src={drag}/>
+				<Title title={this.props.name}/>
+				<Toolbar>
+					<li><Button
+						dataTooltipText={visibilityName}
+						src={this.state.isVisible ? show : hide}
+						name={visibilityName}
+						onClick={this.onChangeVisibility}
 						/>
-				</li> 
-
-			<li><Button 
-					src={expand}
-					onClick={this.onChangeCollapse}
-					dataTooltipText={collapseName}
-					name={collapseName}
-					ariaExpanded={this.state.isExpanded}
-					className={this.state.isExpanded ? 'rotate-up-right-down' : 'rotate-down-right-up'}
-					/>
-			</li>
-			</Toolbar>
-			{/* /<Toolbar description={this.props.description} */}
+					</li>
+					<li><Button
+							name={this.LAYER_INFO}
+							dataTooltipText={this.LAYER_INFO}
+							src={info}
+							onClick={this.onChangeInfo}
+							aria-haspopup="true"
+							/>
+					</li> 
+					<li><Button 
+							src={expand}
+							onClick={this.onChangeCollapse}
+							dataTooltipText={collapseName}
+							name={collapseName}
+							ariaExpanded={this.state.isExpanded}
+							className={this.state.isExpanded ? 'rotate-up-right-down' : 'rotate-down-right-up'}
+							/>
+					</li>
+				</Toolbar>
 			</header>
 			{this.state.isExpanded &&
-				<Hr type={this.props.type} items={this.props.items}/>
+				<LegendTypeItem type={this.props.type} items={this.props.items}/>
 			}
 			{this.state.isInfoOpen &&
 				<Modal>
@@ -101,4 +95,4 @@ class LegendItem extends React.Component {
 }
 }
 
-export default LegendItem
+export default Legend
