@@ -48,13 +48,14 @@ button {
     flex-direction: column;
     align-items: flex-start;
     p{
-        margin: 5px 0 0 20px;
+        margin: 5px 0 0 5px;
+        font-size: 12px;
     }
 }
 
 .basic-buttons-container{
     button{
-        margin-top: 7px;
+        margin: 9.5px 0;
     }
 }
 
