@@ -31,17 +31,14 @@ class LegendItem extends React.Component {
 	LAYER_INFO= "Layer info";
 
 	onChangeVisibility = () => {
-		console.log(this.state.isVisible)
 		this.setState({isVisible: !this.state.isVisible})		
 	}
 
 	onChangeInfo = () => {
-		console.log(this.parseText);
 		this.setState({isInfoOpen: !this.state.isInfoOpen})
 	}
 
 	onChangeCollapse = () => {
-		console.log(this.state.isExpanded);
 		this.setState({isExpanded: !this.state.isExpanded})
 	}
 
