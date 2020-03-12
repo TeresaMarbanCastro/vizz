@@ -15,17 +15,16 @@ const Gradient = props => {
 			<div className="gradient-titles-container">
 			{props.items.filter(item => item.name).map((el,i) => <p key={i}>{el.name}</p>)}
 			</div>
-
-				{props.isExtraTextVisible &&
-					<div className="animated-text"
-						role="region"
-						id="extra-text"
-						aria-live="polite">
-						<p>{randomText}</p>
-						<a href={url} target="_blank"
-						rel="noopener noreferrer"
-						>Check the data</a>
-					</div>}
+			{props.isExtraTextVisible &&
+				<div className="animated-text"
+					role="region"
+					id="extra-text"
+					aria-live="polite">
+					<p>{randomText}</p>
+					<a href={url} target="_blank"
+					rel="noopener noreferrer"
+					>Check the data</a>
+				</div>}
 		</section>
 	)
 }
