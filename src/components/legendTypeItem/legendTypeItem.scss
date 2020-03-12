@@ -1,8 +1,7 @@
 .line {
     border: none;
-    border-top: solid 20px;
+    border-top: solid 7px;
     width: 70px;
-    height: 7px;
     margin: 0;
     
 }
@@ -11,7 +10,7 @@ button {
     flex-direction: row;
 }
 .buttonGradient{
-    height: 54px;
+    height: 7px;
     width: 100%;
     padding: 0;
 }
@@ -21,9 +20,9 @@ button {
 }
 
 .basic{
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    border-radius: 5.5px;
 }
 .basic-titles{
     display: flex;
