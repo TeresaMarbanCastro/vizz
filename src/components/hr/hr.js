@@ -10,7 +10,6 @@ class Hr extends React.Component {
 		super(props);
 		this.state = {
 			isTextVisible: false,
-			
 		};
 	}
 

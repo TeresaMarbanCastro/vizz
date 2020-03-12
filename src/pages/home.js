@@ -21,8 +21,10 @@ class Home extends React.Component {
 			<main className="page">
 				{this.state.data.map((item) => {
 					return(
-						<LegendItem key={item.id}
-							name={item.name} items={item.items}
+						<LegendItem 
+							key={item.id}
+							name={item.name} 
+							items={item.items}
 							description={item.description} 
 							type={item.type}/>
 					)})
