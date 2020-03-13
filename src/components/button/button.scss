@@ -5,6 +5,7 @@ button {
   height: 16ox;
   cursor: pointer;
 }
+
 button[data-tooltip] {
   position: relative;
   cursor: pointer;

@@ -16,15 +16,15 @@ Legend is where the aforementioned main components are orchestrated. It renders 
 ### Next steps
 As aforementioned, there are things that need to be done, such as the refactoring of the legend item type. 
 
-Another further step would be testing the components and including default props.
+Another further step would be **testing** the components and including default props.
 
-Regarding accessibility, even though main aria tags have been implemented and a11y has been taking into account in the design phase, more advances need to be done. 
+Regarding **accessibility**, even though main aria tags have been implemented and a11y has been taking into account in the design phase, more advances need to be done. 
  - Focus managing.
  - Keyboard navigation (esc to close modal)
  - Alternative to color in graphs
  - Semantic labelling of list in Basic component
 
- Other improvements involve refinement of design and responsiveness, sorting the animation of the toolbar arrow, adding transitions and animations, using destructuring for props to increase readability and including i18n files for translation should the app be used in other languages.
+ Other **improvements** involve refinement of design and responsiveness, sorting the animation of the toolbar arrow, adding transitions and animations, using destructuring for props to increase readability and including i18n files for translation should the app be used in other languages.
 
 
 ## Running Script
