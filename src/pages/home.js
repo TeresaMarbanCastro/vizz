@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Legend from '../components/legend/legend';
 import './home.scss';
 

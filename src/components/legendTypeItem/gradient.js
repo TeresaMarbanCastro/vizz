@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Gradient = props => {
 	const colors = props.items.map((item => item.color)).join(',');
@@ -29,6 +30,12 @@ const Gradient = props => {
 			}
 		</section>
 	)
+}
+
+Gradient.propTypes = {
+	items: PropTypes.array,
+	onClick: PropTypes.func,
+	isExtraTextVisible: PropTypes.bool
 }
 
 export default Gradient;

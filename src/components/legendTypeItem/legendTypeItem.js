@@ -1,6 +1,6 @@
 import React from 'react';
 import './legendTypeItem.scss';
-
+import PropTypes from 'prop-types';
 import Gradient from './gradient';
 import Cloropeth from './cloropeth';
 import Basic from './basic';
@@ -32,5 +32,9 @@ class LegendTypeItem extends React.Component {
 			</>
 		)
 	}
+}
+
+LegendTypeItem.propTypes = { 
+	type: PropTypes.string
 }
 export default LegendTypeItem;

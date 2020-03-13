@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const Basic = props => {
 	return (
@@ -14,4 +14,7 @@ const Basic = props => {
 	)
 }
 
+Basic.propTypes = {
+	items: PropTypes.array
+}
 export default Basic;

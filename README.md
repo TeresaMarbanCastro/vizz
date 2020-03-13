@@ -15,7 +15,7 @@ Legend is where the aforementioned main components are orchestrated. It renders 
 ### Next steps
 As aforementioned, there are things that need to be done, such as the refactoring of the legend item type. 
 
-Another further step would be testing the components and verifying proptypes. 
+Another further step would be testing the components and including default props.
 
 Regarding accessibility, even though main aria tags have been implemented and a11y has been taking into account in the design phase, more advances need to be done. 
  - Focus managing.

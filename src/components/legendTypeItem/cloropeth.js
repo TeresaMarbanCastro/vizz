@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Cloropeth = props => {
 	return (
@@ -11,6 +13,10 @@ const Cloropeth = props => {
 			</div>
 		</div>
 	)
+}
+
+Cloropeth.propTypes = {
+	items: PropTypes.array
 }
 
 export default Cloropeth;
