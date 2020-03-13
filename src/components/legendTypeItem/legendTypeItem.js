@@ -6,8 +6,8 @@ import Cloropeth from './cloropeth';
 import Basic from './basic';
 
 class LegendTypeItem extends React.Component {
-	constructor(props) {
-		super(props);
+	constructor() {
+		super();
 		this.state = {
 			isExtraTextVisible: false,
 		};

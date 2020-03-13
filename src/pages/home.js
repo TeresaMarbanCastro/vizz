@@ -5,9 +5,12 @@ import './home.scss';
 
 class Home extends React.Component {
 
-	state = {
-		data: []
-	};
+	constructor(){
+		super();
+		this.state = {
+			data: []
+		};
+	}
 
 	componentDidMount(){
 		fetch('https://raw.githubusercontent.com/Vizzuality/front-end-code-challenge/master/data.json')

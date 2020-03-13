@@ -14,8 +14,8 @@ import Modal from 'components/modal/modal';
 import './legend.scss';
 
 class Legend extends React.Component {
-	constructor(props){
-		super(props);
+	constructor(){
+		super();
 		this.state = {
 			isExpanded: true,
 			isVisible: true,
@@ -23,7 +23,6 @@ class Legend extends React.Component {
 		};
 	}
 
-	parseText = this.props.description.replace(/<[^>]*>/gm, '');
 	SHOW_LAYER = "Show layer";
 	HIDE_LAYER = "Hide layer";
 	COLLAPSE_LAYER = "Collapse layer";
@@ -45,6 +44,8 @@ class Legend extends React.Component {
 	render() {
 		const visibilityName = this.state.isVisible ? this.SHOW_LAYER : this.HIDE_LAYER;
 		const collapseName = this.state.isExpanded ? this.COLLAPSE_LAYER : this.EXPAND_LAYER;
+		const parseText = (this.props.description || {}).replace(/<[^>]*>/gm, '');
+		
 		return (
 			<section>
 				<header className="legend-header">
@@ -85,7 +86,7 @@ class Legend extends React.Component {
 				}
 				{this.state.isInfoOpen &&
 					<Modal>
-						<Title title={this.parseText}/>
+						<Title title={parseText}/>
 						<Button 
 							className="button-modal"					
 							name="close"
@@ -97,6 +98,5 @@ class Legend extends React.Component {
 		)
 	}
 }
-
 
 export default Legend;
