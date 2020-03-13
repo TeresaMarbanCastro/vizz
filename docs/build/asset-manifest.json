@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a5b8bd95.chunk.css",
+    "main.js": "/static/js/main.d07a7325.chunk.js",
+    "main.js.map": "/static/js/main.d07a7325.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.29fcbd12.js",
+    "runtime-main.js.map": "/static/js/runtime-main.29fcbd12.js.map",
+    "static/js/2.5cbde81a.chunk.js": "/static/js/2.5cbde81a.chunk.js",
+    "static/js/2.5cbde81a.chunk.js.map": "/static/js/2.5cbde81a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f86d7623e3eeda51555051fc207f5c4f.js": "/precache-manifest.f86d7623e3eeda51555051fc207f5c4f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a5b8bd95.chunk.css.map": "/static/css/main.a5b8bd95.chunk.css.map",
+    "static/js/2.5cbde81a.chunk.js.LICENSE.txt": "/static/js/2.5cbde81a.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.svg": "/static/media/arrow-down.a599f50b.svg",
+    "static/media/close.svg": "/static/media/close.9798c856.svg",
+    "static/media/drag-dots.svg": "/static/media/drag-dots.eba956a4.svg",
+    "static/media/hide-eye.svg": "/static/media/hide-eye.edfe4042.svg",
+    "static/media/info.svg": "/static/media/info.aed632c3.svg",
+    "static/media/show.svg": "/static/media/show.f503c7d4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.29fcbd12.js",
+    "static/js/2.5cbde81a.chunk.js",
+    "static/css/main.a5b8bd95.chunk.css",
+    "static/js/main.d07a7325.chunk.js"
+  ]
+}
