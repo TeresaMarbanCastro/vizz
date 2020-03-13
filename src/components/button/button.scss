@@ -1,24 +1,23 @@
 button {
-    background-color: #fff;
-    border: none;
-    width: 16px;
-    height: 16ox;
-    cursor: pointer;
-}
+  background-color: #fff;
+  border: none;
+  width: 16px;
+  height: 16ox;
+  cursor: pointer;
 
-button[data-tooltip] {
+  button[data-tooltip] {
     position: relative;
     cursor: pointer;
-}
+  }
 
-[data-tooltip]:before, [data-tooltip]:after {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
+  [data-tooltip]:before, [data-tooltip]:after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
 
-//box
-[data-tooltip]:before {
+  //box
+  [data-tooltip]:before {
     position: absolute;
     bottom: 150%;
     left: 50%;
@@ -52,8 +51,9 @@ button[data-tooltip] {
     line-height: 0;
   }
 
-[data-tooltip]:hover:before,
-[data-tooltip]:hover:after {
-  visibility: visible;
-  opacity: 1;
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+  }
 }

@@ -6,13 +6,16 @@
   padding: 2px;
   height: 100vh;
   overflow: hidden;
+
   *:focus{
     outline: none; //Shame on me
   }
+
   a {
     cursor: pointer;
     color: blue;
   }
+  
   @media (min-width: 494px) {
     padding: 50px;
   }

@@ -1,32 +1,32 @@
 .modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(52, 73, 94, 0.8);
-    z-index: 1; //shame on me
-}
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(52, 73, 94, 0.8);
+	z-index: 1;
 
-.modal-content{
-    position: fixed;
-    top: 2%;
-    margin: 30px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 2%;
-    @media (min-width: 650px) {
-        top: 25%;
-    }
-}
+	.modal-content {
+		position: fixed;
+		top: 2%;
+		margin: 30px;
+		padding: 20px;
+		background: #fff;
+		border-radius: 2%;
 
-.button-modal{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35px;
-    height: 30px;
-    background: #fff;
-    cursor: pointer;
-    border: 0;
+		@media (min-width: 650px) {
+			top: 25%;
+		}
+	}
+
+	.button-modal {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 35px;
+		height: 30px;
+		background: #fff;
+		border: 0;
+	}
 }

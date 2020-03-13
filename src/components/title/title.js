@@ -3,4 +3,4 @@ import './title.scss';
 
 const Title = props => <h2>{props.title}</h2>
 
-export default Title
+export default Title;
