@@ -10,7 +10,8 @@ The smallest units in this project are Icon, Title, Toolbar and Modal. They are 
 
 The second level would be legendTypeItem. Here, we can find three small components (Basic, Cloropeth, Gradient) which are managed by LegendTypeItem. Given their characteristics in common, a following step would be to create a unique component which could contain conditions to return Basic, Cloropeth or Gradient instead of having the three of them. It could be done having the legendTypeItem doing the managing.
 
-Legend is where the aforementioned main components are orchestrated. It renders a section which contains the header with the toolbar and its tooltips, controls the expansion of the legendItemType and shows/hides info modal. 
+Legend is where the aforementioned main components are orchestrated. It renders a section which contains the header with the toolbar and its tooltips, controls the expansion of the legendItemType and shows/hides info modal. As an extra point, clicking / tapping on the gradient line will show additional information as well as a link. 
+
 
 ### Next steps
 As aforementioned, there are things that need to be done, such as the refactoring of the legend item type. 
@@ -23,7 +24,7 @@ Regarding accessibility, even though main aria tags have been implemented and a1
  - Alternative to color in graphs
  - Semantic labelling of list in Basic component
 
- Other improvements involve refinement of design and responsiveness, adding transitions and animations, using destructuring for props to increase readability and including i18n files for translation should the app be used in other languages.
+ Other improvements involve refinement of design and responsiveness, sorting the animation of the toolbar arrow, adding transitions and animations, using destructuring for props to increase readability and including i18n files for translation should the app be used in other languages.
 
 
 ## Running Script
