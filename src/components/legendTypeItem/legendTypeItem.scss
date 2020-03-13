@@ -1,60 +1,60 @@
 .line {
-    border: none;
-    border-top: solid 7px;
-    width: 100%;
-    margin: 0;
+	border: none;
+	border-top: solid 7px;
+	width: 100%;
+	margin: 0;
 }
 button {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 .buttonGradient{
-    height: 7px;
-    width: 100%;
-    padding: 0;
+	height: 7px;
+	width: 100%;
+	padding: 0;
 }
 
 .line-title{
-    margin: 0;
+	margin: 0;
 }
 
 .basic{
-    height: 12px;
-    width: 12px;
-    border-radius: 5.5px;
+	height: 12px;
+	width: 12px;
+	border-radius: 5.5px;
 }
 .basic-titles{
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .basic-container{
-    display: flex;
-    flex-direction: row;
-    margin-left: 15px;
+	display: flex;
+	flex-direction: row;
+	margin-left: 15px;
 }
 .cloropeth-container, .gradient-container{
-    display: flex;
-    flex-direction: column
+	display: flex;
+	flex-direction: column
 }
 
 .cloropeth-titles-container, .gradient-titles-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .basic-titles-container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    p{
-        margin: 5px 0 0 5px;
-        font-size: 12px;
-    }
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	p{
+		margin: 5px 0 0 5px;
+		font-size: 12px;
+	}
 }
 
 .basic-buttons-container{
-    button{
-        margin: 9.5px 0;
-    }
+	button{
+		margin: 9.5px 0;
+	}
 }
