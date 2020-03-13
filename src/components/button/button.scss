@@ -4,56 +4,55 @@ button {
   width: 16px;
   height: 16ox;
   cursor: pointer;
+}
+button[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
 
-  button[data-tooltip] {
-    position: relative;
-    cursor: pointer;
-  }
+[data-tooltip]:before, [data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
-  [data-tooltip]:before, [data-tooltip]:after {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-  }
+//box
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -80px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 4px;
+  border: 1px solid rgba(26, 28, 34, 0.1);
+  background-color: #fff;
+  color: #888888;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  content: attr(data-tooltip); 
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+}
 
-  //box
-  [data-tooltip]:before {
-    position: absolute;
-    bottom: 150%;
-    left: 50%;
-    margin-bottom: 5px;
-    margin-left: -80px;
-    padding: 7px;
-    width: 160px;
-    border-radius: 4px;
-    border: 1px solid rgba(26, 28, 34, 0.1);
-    background-color: #fff;
-    color: #888888;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
-    content: attr(data-tooltip); 
-    text-align: center;
-    font-size: 14px;
-    line-height: 20px;
-  }
+//triangle
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  width: 0;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  line-height: 0;
+}
 
-  //triangle
-  [data-tooltip]:after {
-    position: absolute;
-    bottom: 150%;
-    left: 50%;
-    width: 0;
-    background: #FFFFFF;
-    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    content: " ";
-    line-height: 0;
-  }
-
-  [data-tooltip]:hover:before,
-  [data-tooltip]:hover:after {
-    visibility: visible;
-    opacity: 1;
-  }
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1;
 }
